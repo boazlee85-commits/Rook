@@ -8,12 +8,13 @@ services:
     startCommand: npm start
     autoDeploy: true
 
-  - type: static
+  - type: web
     name: rook-frontend
     branch: main
     root: .
-    buildCommand: npm install && npm run build
-    publishPath: dist
+    buildCommand: npm install && npm run build && npm install -g serve
+    startCommand: serve -s dist -l 3000
+    autoDeploy: true
     envVars:
       - key: VITE_SOCKET_URL
         value: https://rook-backend.onrender.com
