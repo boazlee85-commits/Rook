@@ -12,9 +12,9 @@ services:
     name: rook-frontend
     branch: main
     root: .
-    buildCommand: npm install && npm run build && npm install -g serve
-    startCommand: serve -s dist -l 3000
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s dist -l ${PORT:-3000}
     autoDeploy: true
     envVars:
-      - key: VITE_SOCKET_URL
+      - key: https://rook-backend.onrender.com
         value: https://rook-backend.onrender.com
