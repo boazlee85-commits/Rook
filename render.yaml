@@ -16,5 +16,5 @@ services:
     startCommand: npx serve -s dist -l ${PORT:-3000}
     autoDeploy: true
     envVars:
-      - key: https://rook-backend.onrender.com
+      - key: VITE_SOCKET_URL
         value: https://rook-backend.onrender.com
