@@ -3,15 +3,16 @@ services:
     name: rook-backend
     env: node
     branch: main
-    root: server
+    rootDir: server
     buildCommand: npm install
     startCommand: npm start
     autoDeploy: true
 
   - type: web
     name: rook-frontend
+    env: node
     branch: main
-    root: .
+    rootDir: .
     buildCommand: npm install && npm run build
     startCommand: npx serve -s dist -l ${PORT:-3000}
     autoDeploy: true
