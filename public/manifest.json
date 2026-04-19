@@ -1,0 +1,9 @@
+{
+  "name": "Rook",
+  "short_name": "Rook",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1b14",
+  "theme_color": "#d8b463",
+  "description": "Play Rook in the browser with custom rules and a classic table layout."
+}

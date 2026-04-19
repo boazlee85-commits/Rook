@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SAFE BASE STYLES (no Tailwind parsing issues) */
+:root {
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --background: 152 30% 6%;
+  --foreground: 45 30% 92%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
