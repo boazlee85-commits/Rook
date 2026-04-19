@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: rook-backend
+    env: node
+    branch: main
+    root: server
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+
+  - type: static
+    name: rook-frontend
+    branch: main
+    root: .
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    envVars:
+      - key: VITE_SOCKET_URL
+        value: https://rook-backend.onrender.com
